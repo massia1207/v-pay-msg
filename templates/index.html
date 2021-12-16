@@ -1,0 +1,139 @@
+<div>
+Mike,<br>
+<br>Please approve for processing.<br>
+<br>For verification of funds purposes:
+<hr align="center" width="100%" size="2">
+<h2><strong>Grand TOTAL Funds Needed: $ <span style="background-color:yellow;">{{.GrandTotal}}</span></strong></h2>
+<hr align="center" width="100%" size="2">
+
+Break-down:
+<ul type="disc" style="margin-bottom:0;">
+  <li>Total FlexPay Direct Deposit Value (includes compensation and reimbursed expenses): ${{.DirectDeposit}}</li>
+  <li>Total Vanguard/Ascensus Retirement: (401K ER Safe Harbor ${{.SafeHarbor}}, EE 401K Deferral ${{.EEDeferral}}, and EE Roth Deferral ${{.EERoth}}): ${{.RetirementTotal}}</li>
+  <li>Total Tax Withholding (EE portion of ${{.EETax}} and estimated ER portion of OASDI ${{.EROasdi}} and Medicare ${{.ERMed}}): ${{.TaxWithholdTotal}}</li>
+  <li>Total Garnishments: ${{.Garnishments}}</li>
+</ul>
+
+<hr align="center" width="100%" size="2">
+<h3><strong>Payroll Highlights</strong></h3>
+<hr align="center" width="100%" size="2">
+
+<strong>Pay/ Rate Increases:</strong>
+<!-- NEED TO LOOP THROUGH THE SLICE -->
+  <ul style="margin-top: 5">
+    {{range .PayRates}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+ <strong>Benefits and Deductions:</strong> 
+  <ul style="margin-top: 5">
+    {{range .Benefits}}
+    <li>{{.}}</li>
+    {{end}} 
+  </ul> 
+
+<strong>Signing Bonuses:</strong>
+  <ul style="margin-top: 5">
+    {{range .SigningBonuses}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Annual or Special Bonuses:</strong> 
+  <ul style="margin-top: 5">
+    {{range .OtherBonuses}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Bridge Loans</strong> (total Ventus money loaned to EEs: $36,340 loaned less YTD payments ({{.BridgeLoanPmtCount}} so far)) =  ${{.BridgeLoanBalance}} remaining balance
+
+<table border="0" cellspacing="4" cellpadding="0" style="box-sizing:border-box;">
+<tbody>
+  <tr>
+    <td><b>Employee</b></td>
+    <td><b>Amount</b></td>
+  </tr>
+  
+  <tr>
+    <td>Woods Brown</td>
+    <td>$245.00</td>
+  </tr>
+  <tr>
+    <td>Pete Driscoll</td>
+    <td>$255.00</td>
+  </tr>
+  <tr>
+    <td>Luke Edwards</td>
+    <td>$168.64</td>
+  </tr>
+  <tr>
+    <td>Rachel Florea</td>
+    <td>$177.27</td>
+  </tr>
+  <tr>
+    <td>Scott Graham</td>
+    <td>$204.09</td>
+  </tr>
+  <tr>
+    <td>Christine Langlois Poirier</td>
+    <td>$106.36</td>
+  </tr>
+  <tr>
+    <td>Peter Luhowy</td>
+    <td>$218.18</td>
+  </tr>
+  <tr>
+    <td>Mike Poirier</td>
+    <td>$277.27</td>
+  </tr>
+
+  <tr><td><strong>Semi Monthly Repayment Total: $1,651.81</strong></td></tr>
+</tbody></table><br>
+
+<strong>New Workers:</strong>
+  <ul style="margin-top: 5">
+    {{range .NewWorkers}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Terminations:</strong>
+  <ul style="margin-top: 5">
+    {{range .Terminations}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Expense Reimbursements</strong> (included above): ${{.ExpenseReimbAmount}} <br><br>
+
+<strong>Bank Account Changes:</strong>
+  <ul style="margin-top: 5">
+    {{range .BankChanges}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Tax Changes:</strong>
+  <ul style="margin-top: 5">
+    {{range .TaxChanges}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+<strong>Address Changes:</strong>
+  <ul style="margin-top: 5">
+    {{range .AddressChanges}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
+
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>                                                                      
+        <td align="center" style="border-radius:8px" bgcolor="#2196f3"><a href={{.Href}} style="font-size:16px;font-weight:bold;font-family:'Arial','Helvetica Neue',Arial,sans-serif;color:#ffffff;text-decoration:none;border-radius:8px;padding:12px 36px;display:block" target="_blank">View Register</a></td>
+       </tr>
+     </tbody>
+   </table>
+ 
