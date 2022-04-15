@@ -45,14 +45,14 @@ var tpl *template.Template
 
 func main() {
 checkDate := "12.15.21"
-href := "https://ventussolutions.sharepoint.com/:b:/r/sites/AccountingDocs/Payroll%20Register%20Approvals/12.15.21%20PreProcess%20Register.pdf?csf=1&web=1&e=o55iPE" //updated for 12.15
-dd:= 169915.63
-safe:=4593.05
-eeDef:= 15142.98
-eeRoth:= 2350.00
-eeTax:= 40952.85
-erSoc:= 7899.57
-erMed:= 2308.19
+href := "ID GOES HERE" //updated for 12.15
+dd:= 1000.00
+safe:= 1000.00
+eeDef:= 1000.98
+eeRoth:= 2000.00
+eeTax:= 1000.85
+erSoc:= 1000.57
+erMed:= 1000.19
 garn:=774.25
 count:= findCount(checkDate)         
 exp:= 2195.90
@@ -63,8 +63,8 @@ bonuses:=[]string{"none"}
 workers:=[]string{"none"}
 terms:=[]string{"none"}
 bank:=[]string{"none"}
-taxChanges:= []string{"Craig Welling – changed additional amount withheld for taxes"}
-address:=[]string{"Steve Harrison – both W2 & 1099","Joe Monaghan"}
+taxChanges:= []string{"NAME HERE – changed additional amount withheld for taxes"}
+address:=[]string{"NAME – both W2 & 1099","NAME"}
 loanBalance:= 36340 - (1651.81 * count) 
 taxTotal:= eeTax + erSoc + erMed
 retTotal:= safe + eeDef + eeRoth
@@ -100,13 +100,13 @@ grand:= dd+ retTotal+taxTotal+garn
  }  
 
   // Sender data.
-  from := "assia.marcus@gmail.com"
-  password := "@Race11c"
+  from := "EMAIL HERE"
+  password := "PASSWORD"
 
   // Receiver email address.
   to := []string{
-    "marcus@monumentcpa.com",
-    // "marcus@massia.net",
+    "EMAIL HERE",
+    // "EMAIL HERE",
   }
 
   // smtp server configuration.
